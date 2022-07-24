@@ -13,11 +13,6 @@ class Image extends Model
 
     protected $fillable = array('title','url','workflow_id','status_id');
 
-    public function workflow()
-    {
-        return $this->belongsTo('App\Models\Workflow', 'workflow_id');
-    }
-
     public function status()
     {
         return $this->hasOne('App\Models\Status', 'status_id');
